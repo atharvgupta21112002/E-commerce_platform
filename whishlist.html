@@ -1,0 +1,177 @@
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+   
+    
+    <script src="https://kit.fontawesome.com/4a3b1f73a2.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+   
+    <script src="js/jQuery3.4.1.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
+    
+<link rel="stylesheet" href="userprofile.css">
+<style>
+    .container {
+            margin-top: 50px;
+        }
+        .product-card {
+            margin-bottom: 20px;
+        }
+        .product-card .card-body {
+            padding: 15px;
+        }
+        .product-card .card-title {
+            font-weight: bold;
+        }
+        .product-card .card-text {
+            margin-bottom: 10px;
+        }
+        .product-card .btn {
+            width: 100%;
+        }
+        img{
+            height: 40vh;
+        }
+  
+</style>
+</head>
+<body>
+
+    <div id="1"></div>
+    <script>
+        load("header.html");
+        function load(url)
+        {
+            req = new XMLHttpRequest();
+            req.open("GET", url, false);
+            req.send(null);
+            document.getElementById(1).innerHTML = req.responseText;
+        }
+    </script>
+<br><br><br><br>
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-lg-3 my-lg-0 my-md-1">
+                <div id="sidebar" class="bg-purple">
+                    <div class="h4 text-white">Account</div>
+                    <ul>
+                        <li class="active">
+                            <a href="user_profile.html" class="text-decoration-none d-flex align-items-start">
+                                <div class="fas fa-box pt-2 me-3"></div>
+                                <div class="d-flex flex-column">
+                                    <div class="link">&nbsp;&nbsp;My Orders</div><br>
+                                    <div class="link-desc">View & Manage orders and returns</div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="user_profile.html" class="text-decoration-none d-flex align-items-start">
+                                <div class="fas fa-box-open pt-2 me-3"></div>
+                                <div class="d-flex flex-column">
+                                    <div class="link">&nbsp;&nbsp;Address Book</div><br>
+                                    <div class="link-desc">View & Manage Addresses</div>
+                                </div>
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="profile.html" class="text-decoration-none d-flex align-items-start">
+                                <div class="far fa-address-book pt-2 me-3"></div>
+                                <div class="d-flex flex-column">
+                                    <div class="link">&nbsp;&nbsp;My Profile</div><br>
+                                    <div class="link-desc">Change your profile details & password</div>
+                                </div>
+                            </a>
+                        </li>
+                        
+                        
+                        <li>
+                            <a href="contactus.html" class="text-decoration-none d-flex align-items-start">
+                                <div class="fas fa-headset pt-2 me-3"></div>
+                                <div class="d-flex flex-column">
+                                    <div class="link">&nbsp;&nbsp;Help & Support</div><br>
+                                    <div class="link-desc">Contact Us for help and support</div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-9 my-lg-0 my-1">
+                <div id="main-content" class="bg-white border">
+                    <div class="d-flex flex-column">
+                        <h1>Wishlist</h1>
+        
+                       
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="card product-card">
+                                    <img src="img10.webp" class="card-img-top" alt="Product 1">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Product 1</h5>
+                                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                        <a href="#" class="btn btn-primary" style="background-color: purple;">Add to Cart</a><br><br>
+                                        <a href="#" class="btn btn-danger" style="background-color: orangered;">Remove from Wishlist</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card product-card">
+                                    <img src="img3.jpg" class="card-img-top" alt="Product 2">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Product 2</h5>
+                                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                        <a href="#" class="btn btn-primary" style="background-color: purple;">Add to Cart</a><br><br>
+                                        <a href="#" class="btn btn-danger" style="background-color: orangered;">Remove from Wishlist</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card product-card">
+                                    <img src="img4.jpg" class="card-img-top" alt="Product 3">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Product 3</h5>
+                                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                        <a href="#" class="btn btn-primary" style="background-color: purple;">Add to Cart</a><br><br>
+                                        <a href="#" class="btn btn-danger" style="background-color: orangered;">Remove from Wishlist</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+<br><br><br><br>
+    <div id="4"></div>
+    <script>
+        load("footer.html");
+        function load(url)
+        {
+            req = new XMLHttpRequest();
+            req.open("GET", url, false);
+            req.send(null);
+            document.getElementById(4).innerHTML = req.responseText;
+        }
+    </script>
+</body>
+</html>

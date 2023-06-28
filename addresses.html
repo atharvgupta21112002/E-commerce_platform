@@ -1,0 +1,160 @@
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+    
+    <script src="https://kit.fontawesome.com/4a3b1f73a2.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+   
+    <script src="js/jQuery3.4.1.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
+    
+<link rel="stylesheet" href="userprofile.css">
+<style>
+     .container {
+            margin-top: 50px;
+        }
+        .address-card {
+            margin-bottom: 20px;
+        }
+        .address-card .card-body {
+            padding: 15px;
+        }
+        .address-card .card-title {
+            font-weight: bold;
+        }
+        .add-address-btn {
+            margin-bottom: 20px;
+        }
+  
+</style>
+</head>
+<body>
+
+    <div id="1"></div>
+    <script>
+        load("header.html");
+        function load(url)
+        {
+            req = new XMLHttpRequest();
+            req.open("GET", url, false);
+            req.send(null);
+            document.getElementById(1).innerHTML = req.responseText;
+        }
+    </script>
+<br><br><br><br>
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-lg-3 my-lg-0 my-md-1">
+                <div id="sidebar" class="bg-purple">
+                    <div class="h4 text-white">Account</div>
+                    <ul>
+                        
+                        <li>
+                            <a href="user_profile.html" class="text-decoration-none d-flex align-items-start">
+                                <div class="fas fa-box-open pt-2 me-3"></div>
+                                <div class="d-flex flex-column">
+                                    <div class="link">&nbsp;&nbsp;My Orders</div><br>
+                                    <div class="link-desc">View & Manage orders and returns</div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="active">
+                            <a href="#" class="text-decoration-none d-flex align-items-start">
+                                <div class="fas fa-box pt-2 me-3"></div>
+                                <div class="d-flex flex-column">
+                                    <div class="link">&nbsp;&nbsp;Address Book</div><br>
+                                    <div class="link-desc">View & Manage Addresses</div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="profile.html" class="text-decoration-none d-flex align-items-start">
+                                <div class="far fa-address-book pt-2 me-3"></div>
+                                <div class="d-flex flex-column">
+                                    <div class="link">&nbsp;&nbsp;My Profile</div><br>
+                                    <div class="link-desc">Change your profile details & password</div>
+                                </div>
+                            </a>
+                        </li>
+                        
+                        
+                        <li>
+                            <a href="contactus.html" class="text-decoration-none d-flex align-items-start">
+                                <div class="fas fa-headset pt-2 me-3"></div>
+                                <div class="d-flex flex-column">
+                                    <div class="link">&nbsp;&nbsp;Help & Support</div><br>
+                                    <div class="link-desc">Contact Us for help and support</div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-9 my-lg-0 my-1">
+                <div id="main-content" class="bg-white border">
+                    <div class="d-flex flex-column">
+                        <h1>Manage Addresses</h1>
+        
+                       
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="card address-card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Home Address</h5>
+                                        <p class="card-text">123 Main St, City, Country</p>
+                                        <a href="#" class="btn btn-primary">Edit</a>
+                                        <a href="#" class="btn btn-danger">Delete</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card address-card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Office Address</h5>
+                                        <p class="card-text">456 Business Ave, City, Country</p>
+                                        <a href="#" class="btn btn-primary">Edit</a>
+                                        <a href="#" class="btn btn-danger">Delete</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        <a href="#" class="btn btn-success add-address-btn">Add New Address</a>
+                    </div>
+                    
+                </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+<br><br><br><br>
+    <div id="4"></div>
+    <script>
+        load("footer.html");
+        function load(url)
+        {
+            req = new XMLHttpRequest();
+            req.open("GET", url, false);
+            req.send(null);
+            document.getElementById(4).innerHTML = req.responseText;
+        }
+    </script>
+</body>
+</html>

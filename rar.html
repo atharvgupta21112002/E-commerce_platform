@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Refund and Return Products</title>
+   
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .container {
+            margin-top: 50px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: orangered;
+        }
+body{
+    background-color: rgb(174, 169, 169);
+}
+        .product-list {
+            margin-top: 30px;
+        }
+
+        .product-list table {
+            width: 100%;
+        }
+
+        .product-list table th,
+        .product-list table td {
+            padding: 10px;
+            text-align: center;
+        }
+
+        .product-list table th {
+            background-color: #f8f9fa;
+        }
+
+        .product-list table td {
+            border-bottom: 1px solid #dee2e6;
+        }
+    </style>
+   
+    
+     <script src="https://kit.fontawesome.com/4a3b1f73a2.js"></script>
+     <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    
+     <script src="js/jQuery3.4.1.js"></script>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
+</head>
+<body>
+    <div id="1"></div>
+    <script>
+        load("header.html");
+        function load(url)
+        {
+            req = new XMLHttpRequest();
+            req.open("GET", url, false);
+            req.send(null);
+            document.getElementById(1).innerHTML = req.responseText;
+        }
+    </script>
+    <br><br><br><br><br><br>
+    <div class="container">
+        <h1>Refund and Return Products</h1>
+        <div class="product-list">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Reason for Return</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Product 1</td>
+                        <td>Wrong size</td>
+                        <td>Pending</td>
+                    </tr>
+                    <tr>
+                        <td>Product 2</td>
+                        <td>Defective item</td>
+                        <td>Approved</td>
+                    </tr>
+                    <tr>
+                        <td>Product 3</td>
+                        <td>Changed mind</td>
+                        <td>Rejected</td>
+                    </tr>
+                   
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <br>  <br>  <br>  <br>
+    <div id="4"></div>
+    <script>
+        load("footer.html");
+        function load(url)
+        {
+            req = new XMLHttpRequest();
+            req.open("GET", url, false);
+            req.send(null);
+            document.getElementById(4).innerHTML = req.responseText;
+        }
+    </script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

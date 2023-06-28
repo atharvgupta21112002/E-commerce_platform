@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Payment Gateway</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+ 
+    
+  <script src="https://kit.fontawesome.com/4a3b1f73a2.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+ 
+  <script src="js/jQuery3.4.1.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      
+    }
+
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      color: #333;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      background-color: orangered;
+      color: #fff;
+      text-decoration: none;
+      border: none;
+      border-radius: 5px;
+      text-align: center;
+    }
+   
+
+  footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        
+        #containerFooter {
+            width: 100%;
+            background-color: rgb(29, 29, 29);
+            color: white;
+            letter-spacing: 1px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            text-transform: uppercase;
+            font-size: 15px;
+            padding: 15px 300px;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        #containerFooter h3:hover, #containerFooter p:hover {
+            color: lightslategray;
+            cursor: pointer;
+        }
+        
+       
+  </style>
+</head>
+<body>
+    <div id="1"></div>
+    <script>
+        load("header.html");
+        function load(url)
+        {
+            req = new XMLHttpRequest();
+            req.open("GET", url, false);
+            req.send(null);
+            document.getElementById(1).innerHTML = req.responseText;
+        }
+    </script>
+    <br><br><br><br>
+  <div class="container" style="margin-top: 50px;margin-bottom:25px;padding: 5px;">
+   
+    <form id="paymentForm">
+      <div class="form-group">
+        <label for="cardNumber">Card Number</label>
+        <input type="text" class="form-control" id="cardNumber" placeholder="Enter your card number" required>
+      </div>
+      <div class="form-group">
+        <label for="cardName">Cardholder Name</label>
+        <input type="text" class="form-control" id="cardName" placeholder="Enter the cardholder name" required>
+      </div>
+      <div class="form-group">
+        <label for="expiryDate">Expiry Date</label>
+        <input type="text" class="form-control" id="expiryDate" placeholder="MM/YYYY" required>
+      </div>
+      <div class="form-group">
+        <label for="cvv">CVV</label>
+        <input type="text" class="form-control" id="cvv" placeholder="Enter the CVV" required>
+      </div>
+      <button type="submit" class="btn btn-primary" id="paynow">Pay Now</button>
+    </form>
+  </div>
+  <br><br><br><br>
+  <div id="4"></div>
+  <script>
+      load("footer.html");
+      function load(url)
+      {
+          req = new XMLHttpRequest();
+          req.open("GET", url, false);
+          req.send(null);
+          document.getElementById(4).innerHTML = req.responseText;
+      }
+  </script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('#paymentForm').submit(function(event) {
+        event.preventDefault();
+      
+        alert('Payment processed successfully!');
+        
+        window.location.href = 'orderPlaced.html';
+      });
+    });
+    document.getElementById("backButton").addEventListener("click", function() {
+            window.location.href = "paymentoptions.html";
+        });
+      
+  </script>
+</body>
+</html>

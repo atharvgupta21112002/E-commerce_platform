@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+    
+    <script src="https://kit.fontawesome.com/4a3b1f73a2.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+   
+    <script src="js/jQuery3.4.1.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
+    
+<link rel="stylesheet" href="userprofile.css">
+</head>
+<body>
+
+    <div id="1"></div>
+    <script>
+        load("header.html");
+        function load(url)
+        {
+            req = new XMLHttpRequest();
+            req.open("GET", url, false);
+            req.send(null);
+            document.getElementById(1).innerHTML = req.responseText;
+        }
+    </script>
+<br><br><br><br>
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-lg-3 my-lg-0 my-md-1">
+                <div id="sidebar" class="bg-purple">
+                    <div class="h4 text-white">Account</div>
+                    <ul>
+                        <li class="active">
+                            <a href="#" class="text-decoration-none d-flex align-items-start">
+                                <div class="fas fa-box pt-2 me-3"></div>
+                                <div class="d-flex flex-column">
+                                    <div class="link">&nbsp;&nbsp;My Orders</div><br>
+                                    <div class="link-desc">View & Manage orders and returns</div>
+                                </div>
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="addresses.html" class="text-decoration-none d-flex align-items-start">
+                                <div class="far fa-address-book pt-2 me-3"></div>
+                                <div class="d-flex flex-column">
+                                    <div class="link">&nbsp;&nbsp;Address Book</div><br>
+                                    <div class="link-desc">View & Manage Addresses</div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="profile.html" class="text-decoration-none d-flex align-items-start">
+                                <div class="far fa-user pt-2 me-3"></div>
+                                <div class="d-flex flex-column">
+                                    <div class="link">&nbsp;&nbsp;My Profile</div><br>
+                                    <div class="link-desc">Change your profile details & password</div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="contactus.html" class="text-decoration-none d-flex align-items-start">
+                                <div class="fas fa-headset pt-2 me-3"></div>
+                                <div class="d-flex flex-column">
+                                    <div class="link">&nbsp;&nbsp;Help & Support</div><br>
+                                    <div class="link-desc">Contact Us for help and support</div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-9 my-lg-0 my-1">
+                <div id="main-content" class="bg-white border">
+                    <div class="d-flex flex-column">
+                        
+                    </div>
+                    <div class="d-flex my-4 flex-wrap">
+                        <div class="box me-4 my-1 bg-light">
+                            <img src="https://www.freepnglogos.com/uploads/box-png/cardboard-box-brown-vector-graphic-pixabay-2.png"
+                                alt="">
+                            <div class="d-flex align-items-center mt-2">
+                                <div class="tag" style="align-items: center;text-align: center;">Orders placed</div>
+                                <div class="ms-auto number">&nbsp;&nbsp;10</div>
+                            </div>
+                        </div>
+                        &nbsp;&nbsp;
+                        <div class="box me-4 my-1 bg-light">
+                            <img src="https://www.freepnglogos.com/uploads/shopping-cart-png/shopping-cart-campus-recreation-university-nebraska-lincoln-30.png"
+                                alt="">
+                            <div class="d-flex align-items-center mt-2">
+                                <div class="tag"><a href="cart.html" style="text-decoration: none;color:black">Items in Cart</a></div>
+                                <div class="ms-auto number">&nbsp;&nbsp;10</div>
+                            </div>
+                        </div>
+                        &nbsp;&nbsp;
+                        <div class="box me-4 my-1 bg-light">
+                            <img src="https://www.freepnglogos.com/uploads/love-png/love-png-heart-symbol-wikipedia-11.png"
+                                alt="">
+                            <div class="d-flex align-items-center mt-2">
+                                <div class="tag"><a href="whishlist.html" style="text-decoration: none;color:black">Wishlist</a></div>
+                                <div class="ms-auto number">&nbsp;&nbsp;10</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-uppercase">My recent orders</div>
+                    <div class="order my-3 bg-light">
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <div class="d-flex flex-column justify-content-between order-summary">
+                                    <div class="d-flex align-items-center">
+                                        <div class="text-uppercase">Order &nbsp;&nbsp;#fur10001&nbsp;&nbsp;</div>
+                                        <div class="blue-label ms-auto text-uppercase">paid</div>
+                                    </div>
+                                    <div class="fs-8">Products #03</div>
+                                    <div class="fs-8">22 August, 2020 | 12:05 PM</div>
+                                    <div class="rating d-flex align-items-center pt-1">
+                                        <img src="https://www.freepnglogos.com/uploads/like-png/like-png-hand-thumb-sign-vector-graphic-pixabay-39.png"
+                                            alt=""><span class="px-2">Rating:</span>
+                                        <span class="fas fa-star"></span>
+                                        <span class="fas fa-star"></span>
+                                        <span class="fas fa-star"></span>
+                                        <span class="fas fa-star"></span>
+                                        <span class="far fa-star"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-8">
+                                <div class="d-sm-flex align-items-sm-start justify-content-sm-between">
+                                    <div class="status">Status : Delivered</div>
+                                    <div class="btn btn-primary text-uppercase">
+                                        <a href="tracking.html" style="text-decoration: none; color: purple; ">order info</a></div>
+                                </div>
+                                <div class="progressbar-track">
+                                    <ul class="progressbar">
+                                        <li id="step-1" class="text-muted green">
+                                            <span class="fas fa-gift"></span>
+                                        </li>
+                                        <li id="step-2" class="text-muted green">
+                                            <span class="fas fa-check"></span>
+                                        </li>
+                                        <li id="step-3" class="text-muted green">
+                                            <span class="fas fa-box"></span>
+                                        </li>
+                                        <li id="step-4" class="text-muted green">
+                                            <span class="fas fa-truck"></span>
+                                        </li>
+                                        <li id="step-5" class="text-muted green">
+                                            <span class="fas fa-box-open"></span>
+                                        </li>
+                                    </ul>
+                                    <div id="tracker"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="order my-3 bg-light">
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <div class="d-flex flex-column justify-content-between order-summary">
+                                    <div class="d-flex align-items-center">
+                                        <div class="text-uppercase">Order&nbsp;&nbsp; #fur10001&nbsp;&nbsp;</div>
+                                        <div class="green-label ms-auto text-uppercase">cod</div>
+                                    </div>
+                                    <div class="fs-8">Products #03</div>
+                                    <div class="fs-8">22 August, 2020 | 12:05 PM</div>
+                                    <div class="rating d-flex align-items-center pt-1">
+                                        <img src="https://www.freepnglogos.com/uploads/like-png/like-png-hand-thumb-sign-vector-graphic-pixabay-39.png"
+                                            alt=""><span class="px-2">Rating:</span>
+                                        <span class="fas fa-star"></span>
+                                        <span class="fas fa-star"></span>
+                                        <span class="fas fa-star"></span>
+                                        <span class="fas fa-star"></span>
+                                        <span class="far fa-star"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-8">
+                                <div class="d-sm-flex align-items-sm-start justify-content-sm-between">
+                                    <div class="status">Status : Delivered</div>
+                                    <div class="btn btn-primary text-uppercase">
+                                        <a href="tracking.html" style="text-decoration: none; color: purple; ">
+                                        order info</a></div>
+                                </div>
+                                <div class="progressbar-track">
+                                    <ul class="progressbar">
+                                        <li id="step-1" class="text-muted green">
+                                            <span class="fas fa-gift"></span>
+                                        </li>
+                                        <li id="step-2" class="text-muted">
+                                            <span class="fas fa-check"></span>
+                                        </li>
+                                        <li id="step-3" class="text-muted">
+                                            <span class="fas fa-box"></span>
+                                        </li>
+                                        <li id="step-4" class="text-muted">
+                                            <span class="fas fa-truck"></span>
+                                        </li>
+                                        <li id="step-5" class="text-muted">
+                                            <span class="fas fa-box-open"></span>
+                                        </li>
+                                    </ul>
+                                    <div id="tracker"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+<br><br><br><br>
+    <div id="4"></div>
+    <script>
+        load("footer.html");
+        function load(url)
+        {
+            req = new XMLHttpRequest();
+            req.open("GET", url, false);
+            req.send(null);
+            document.getElementById(4).innerHTML = req.responseText;
+        }
+    </script>
+</body>
+</html>
